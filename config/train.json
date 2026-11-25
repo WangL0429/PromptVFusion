@@ -1,0 +1,72 @@
+{
+  "architecture": "MAVFusion + Prompt with learned motion-conditioned feature correction",
+  "seed": 2025,
+  "epochs": 2,
+  "data_root": "data/M3SVD",
+  "train_manifest": "manifests/train.jsonl",
+  "val_manifest": "manifests/validation.jsonl",
+  "fusion_checkpoint": "checkpoint/model.pth",
+  "channel_scales": "config/channel_scales.json",
+  "init_checkpoint": "checkpoint/prompt_gate_init.pth",
+  "training_size_hw": [
+    240,
+    320
+  ],
+  "native_size_hw": [
+    480,
+    640
+  ],
+  "dim": 32,
+  "canonical_size": [
+    60,
+    80
+  ],
+  "flow_max_res": 320,
+  "prompt_lr": 0.0001,
+  "gate_lr": 0.0003,
+  "backbone_lr": 1e-06,
+  "bptt_frames": 7,
+  "grad_clip": 1.0,
+  "temperature": 0.02,
+  "gate": {
+    "width": 48,
+    "dilations": [
+      1,
+      2,
+      4,
+      8
+    ]
+  },
+  "warmup_frames": 10,
+  "complete_chunk": 8,
+  "expected_train_videos": 170,
+  "expected_train_frames": 117088,
+  "expected_val_videos": 18,
+  "expected_val_frames": 12081,
+  "curriculum": [
+    {
+      "max_gap": 4,
+      "complete": 0.3,
+      "switch_ratio": 0.25
+    },
+    {
+      "max_gap": 7,
+      "complete": 0.2,
+      "switch_ratio": 0.25
+    }
+  ],
+  "variant": "motion_guided_model",
+  "loss": {
+    "completion": 1.0,
+    "fusion": 1.0,
+    "roi": {
+      "completion": 2.0,
+      "fusion": 0.5,
+      "quantile": 0.75,
+      "dilate": 3
+    }
+  },
+  "channel_means": "config/channel_means.json",
+  "reject_stale_history": true,
+  "calibration": "config/calibration.json"
+}

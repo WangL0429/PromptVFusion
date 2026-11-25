@@ -1,0 +1,74 @@
+{
+  "visible": {
+    "selected": "structure",
+    "scores": {
+      "pixel": {
+        "coefficients": [
+          1.0,
+          0.0
+        ],
+        "threshold": 0.0,
+        "auc": 0.5184410354622161,
+        "mean_feature_gain_per_valid_pixel": 0.025204881094396114,
+        "sampled_coverage": 0.9948896862819844
+      },
+      "structure": {
+        "coefficients": [
+          0.0,
+          1.0
+        ],
+        "threshold": -0.021826431932810753,
+        "auc": 0.5573353890853963,
+        "mean_feature_gain_per_valid_pixel": 0.0942127094604075,
+        "sampled_coverage": 0.9948896862819844
+      },
+      "mixed": {
+        "coefficients": [
+          1.0,
+          0.14194871093392591
+        ],
+        "threshold": -0.0010817466871516533,
+        "auc": 0.5200489387797764,
+        "mean_feature_gain_per_valid_pixel": 0.02544817957095802,
+        "sampled_coverage": 0.9948896862819844
+      }
+    },
+    "original_coverage": 0.9948896765708923
+  },
+  "infrared": {
+    "selected": "structure",
+    "scores": {
+      "pixel": {
+        "coefficients": [
+          1.0,
+          0.0
+        ],
+        "threshold": 0.0,
+        "auc": 0.6535336799522385,
+        "mean_feature_gain_per_valid_pixel": 0.16154755093157291,
+        "sampled_coverage": 0.970805328522556
+      },
+      "structure": {
+        "coefficients": [
+          0.0,
+          1.0
+        ],
+        "threshold": -0.009956215470961538,
+        "auc": 0.6106825786877774,
+        "mean_feature_gain_per_valid_pixel": 0.24965236894786358,
+        "sampled_coverage": 0.970805328522556
+      },
+      "mixed": {
+        "coefficients": [
+          1.0,
+          1.2064397145986934
+        ],
+        "threshold": -0.011585905552227169,
+        "auc": 0.679066266750259,
+        "mean_feature_gain_per_valid_pixel": 0.21873419638723135,
+        "sampled_coverage": 0.970805328522556
+      }
+    },
+    "original_coverage": 0.9708053469657898
+  }
+}
